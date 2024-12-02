@@ -1,10 +1,10 @@
 import ProjectForm from '../project/ProjectForm';
 import styles from './NewProject.module.css';
-import { redirect, useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function NewProject() {
 
-    const history = useHistory();
+    const history = useNavigate();
 
     function createPost(project) {
 

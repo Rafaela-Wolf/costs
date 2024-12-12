@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 function NewProject() {
 
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     function createPost(project) {
 
@@ -21,7 +21,7 @@ function NewProject() {
         })
             .then((resp) => resp.json())
             .then((data) => {
-                history.push('/projects', {message: 'Projeto criado com sucesso'})
+                navigate('/projects', {message: 'Projeto criado com sucesso'})
             })
             .catch((err) => console.log(err));
     }

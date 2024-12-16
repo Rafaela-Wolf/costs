@@ -12,20 +12,9 @@
       "services": []
     },
     {
-      "id": "6a37",
-      "name": "projeto-teste",
-      "budget": "10000",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "27cd",
-      "name": "projeto-teste-2",
-      "budget": "4000",
+      "id": "ed3f",
+      "name": "teste1",
+      "budget": "9000",
       "category": {
         "id": "1",
         "name": "Infra"
@@ -37,11 +26,11 @@
   "categories": [
     {
       "id": "1",
-      "name": "Infra"
+      "name": "Infrastructure"
     },
     {
       "id": "2",
-      "name": "Desenvolvimento"
+      "name": "Development"
     },
     {
       "id": "3",
@@ -49,7 +38,7 @@
     },
     {
       "id": "4",
-      "name": "Planejamento"
+      "name": "Planning"
     }
   ]
 }

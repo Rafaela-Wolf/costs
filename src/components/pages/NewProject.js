@@ -21,7 +21,7 @@ function NewProject() {
         })
             .then((resp) => resp.json())
             .then((data) => {
-                navigate('/projects', {message: 'Projeto criado com sucesso'})
+                navigate('/projects', {message: 'Project created successfully'})
             })
             .catch((err) => console.log(err));
     }
@@ -29,7 +29,7 @@ function NewProject() {
     return (
         <div className={styles.newproject_container}>
             <h1>Create Project</h1>
-            <p>Crie seus projeto para depois adicionar os serviços</p>
+            <p>Create your projects first, then add the services</p>
             <ProjectForm handleSubmit={createPost} btnText="Create Project"/>
         </div>
     )

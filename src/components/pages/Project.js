@@ -46,8 +46,8 @@ function Project() {
 
         setMessage("");
 
-        if(project.budget < project.cost) {
-            setMessage("O orçamento não pode ser menor que o custo do projeto!");
+        if (project.budget < project.cost) {
+            setMessage("The budget cannot be lower than the project cost!");
             setType("error");
             return false;
         }
@@ -63,7 +63,7 @@ function Project() {
             .then((data) => {
                 setProject(data);
                 setShowProjectForm(false);
-                setMessage("Projeto atualizado!");
+                setMessage("Project updated!");
                 setType("success");
             })
             .catch((err) => console.log(err));
@@ -80,7 +80,7 @@ function Project() {
     function createService(project) {
 
         setMessage("");
-    
+
         const lastService = project.services[project.services.lenght - 1];
 
         lastService.id = uuidv4();
@@ -89,8 +89,8 @@ function Project() {
 
         const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost);
 
-        if(newCost > parseFloat(project.budget)) {
-            setMessage('Orçamento ultrapassado, verifiqe o valor o serviço');
+        if (newCost > parseFloat(project.budget)) {
+            setMessage('Budget exceeded, please check the service value.');
             setType('error');
             project.services.pop();
             return false;
@@ -133,7 +133,7 @@ function Project() {
             .then((data) => {
                 setProject(projectUpdated)
                 setServices(servicesUpdate)
-                setMessage("Serviço removido com sucesso!")
+                setMessage("Service successfully removed!")
             })
             .catch((err) => console.log(err));
     }
@@ -144,32 +144,32 @@ function Project() {
                 <Container customClass="column">
                     {message && <Message type={type} msg={message} />}
                     <div className={styles.details_container}>
-                        <h1>Projeto: {project.name}</h1>
+                        <h1>Project: {project.name}</h1>
                         <button className={styles.btn} onClick={toggleProjectForm}>
                             {!showProjectForm ? 'Edit project' : 'Close'}
                         </button>
                         {!showProjectForm ? (
                             <div className={styles.project_info}>
                                 <p><span>Category:</span> {project.category.name}</p>
-                                <p><span>Total budget:</span> R${project.budget}</p>
-                                <p><span>Total used:</span> R${project.cost}</p>
+                                <p><span>Total budget:</span> ${project.budget}</p>
+                                <p><span>Total used:</span> ${project.cost}</p>
                             </div>
                         ) : (
                             <div className={styles.project_info}>
-                                <ProjectForm handleSubmit={editPost} btnText="Concluir edição" projectData={project} />
+                                <ProjectForm handleSubmit={editPost} btnText="Finish edit" projectData={project} />
                             </div>
                         )}
                     </div>
                     <div className={styles.service_form_container}>
-                        <h2>Adicione um serviço:</h2>
+                        <h2>Add a service:</h2>
                         <button className={styles.btn} onClick={toggleServiceForm}>
-                            {!showServiceForm ? 'Adicionar serviço' : 'Close'}
+                            {!showServiceForm ? 'Add service' : 'Close'}
                         </button>
                         <div className={styles.project_info}>
                             {showServiceForm && (
                                 <ServiceForm 
                                     handleSubmit={createService}
-                                    btnText="Adiconar serviço"
+                                    btnText="Add service"
                                     projectData={project}
                                 />
                             )}
@@ -189,7 +189,7 @@ function Project() {
                                 />
                             ))
                         }
-                        {services.length === 0 && <p>Não há serviços cadastrados.</p>}
+                        {services.length === 0 && <p>No services registered.</p>}
                     </Container>
                 </Container>
             </div> 

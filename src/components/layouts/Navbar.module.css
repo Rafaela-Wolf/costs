@@ -5,6 +5,10 @@
     padding: 1em;
 }
 
+.logo {
+    width: 60px;
+}
+
 .list {
     display: flex;
     list-style: none;

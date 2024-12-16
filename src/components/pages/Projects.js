@@ -5,7 +5,6 @@ import Container from "../layouts/Container";
 import LinkButton from "../layouts/LinkButton";
 import ProjectCard from "../project/ProjectCard";
 import { useEffect, useState } from "react";
-import Loading from "../layouts/Loading";
 
 function Projects() {
 
@@ -55,7 +54,7 @@ function Projects() {
     return (
         <div className={styles.project_container}>
             <div className={styles.title_container}>
-                <h1>Meus Projetos</h1>
+                <h1>My Projects</h1>
                 <LinkButton to="/newproject" text="Create Project" />
             </div>
             {message && <Message type="success" msg={message} />}
@@ -72,7 +71,7 @@ function Projects() {
                             handleRemove={removePoject}
                         />
                     ))}
-                {removeLoading && <Loading />}
+                {removeLoading}
             </Container>
         </div>
     )

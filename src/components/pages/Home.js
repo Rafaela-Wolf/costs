@@ -1,5 +1,5 @@
 import styles from './Home.module.css';
-import savings from '../../assets/images/savings.png';
+import savings from '../../assets/images/savings-cortada.png';
 import LinkButton from '../layouts/LinkButton';
 
 function Home() {

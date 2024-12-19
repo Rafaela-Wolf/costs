@@ -10,20 +10,20 @@ function ProjectCard({ id, name, budget, category, handleRemove }) {
     }
 
     return (
-        <div className={styles.project_card}>
-            <h4>{name}</h4>
-            <p><span>Budget:</span> ${budget}</p>
-            <p className={styles.category_text}><span className={`${styles[category.toLowerCase()]}`}></span>{category}</p>
+            <div className={styles.project_card}>
+                <h4>{name}</h4>
+                <p><span>Budget:</span> ${budget}</p>
+                <p className={styles.category_text}><span className={`${styles[category.toLowerCase()]}`}></span>{category}</p>
 
-            <div className={styles.project_card_actions}>
-                <Link to={`/projects/${id}`}>
-                    <BsPencil>Edit</BsPencil>
-                </Link>
-                <button onClick={remove}>
-                    <BsFillTrashFill>Remove</BsFillTrashFill>
-                </button>
+                <div className={styles.project_card_actions}>
+                    <Link to={`/projects/${id}`}>
+                        <BsPencil>Edit</BsPencil>
+                    </Link>
+                    <button onClick={remove}>
+                        <BsFillTrashFill>Remove</BsFillTrashFill>
+                    </button>
+                </div>
             </div>
-        </div>
     )
 }
 

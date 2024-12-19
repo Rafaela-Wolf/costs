@@ -2,16 +2,21 @@
     padding: 1em;
     border: 1px solid #7a7a7a;
     border-radius: 5px;
-    width: 24%;
-    margin: 0.5%;
+    width: 20%;
+    margin: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
 }
 
 .project_card h4 {
     background-color: #222;
     color: #ffbb33;
-    padding: 0.4em;
+    padding: 8px 15px;
     margin-bottom: 1.3em;
-    font-size: 1.3em;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
 }
 
 .project_card p {
@@ -38,19 +43,19 @@
 }
 
 .category_text .infra {
-    background-color: #FFAEBC;
+    background-color: #FF7690;
 }
 
 .category_text .desenvolvimento {
-    background-color: #A0E7E5;
+    background-color: #54D6D1;
 }
 
 .category_text .design {
-    background-color: #B4F8C8;
+    background-color: #73E899;
 }
 
 .category_text .planejamento {
-    background-color: #fbe7c6;
+    background-color: #FCD49D;
 }
 
 .project_card_actions {
@@ -74,6 +79,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    border-radius: 5px;
 }
 
 .project_card_actions a:hover,
@@ -83,5 +89,25 @@
 }
 
 .project_card_actions svg {
-    margin-right: .5em;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .project_card {
+        width: 40%;
+    }
+}
+
+@media(max-width: 550px) {
+    .project_card {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 425px) {
+    .project_card {
+        width: 100%;
+    }
 }

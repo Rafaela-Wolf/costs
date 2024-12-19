@@ -21,6 +21,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "ec4a",
+      "name": "projeto-teste-design-responsivo",
+      "budget": "4000000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [

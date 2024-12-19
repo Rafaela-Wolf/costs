@@ -6,8 +6,19 @@
 
 .newproject_container h1 {
     margin-bottom: 0.5em;
+    color: #222;
 }
 
 .newproject_container p {
     color: #7b7b7b;
+}
+
+@media(max-width: 360px) {
+    .newproject_container h1 {
+        font-size: 20px;
+    }
+
+    .newproject_container p {
+        font-size: 14px;
+    }
 }

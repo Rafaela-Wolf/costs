@@ -1,21 +1,29 @@
 .project_details {
-    padding: 2em;
+    margin: 40px;
 }
 
 .project_details h1 {
     background-color: #222;
     color: #ffbb33;
-    padding: 1.4em;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
 .project_details span {
     font-weight: bold;
 }
 
-.project_details h1,
-.project_details h2,
+.project_details h2{
+    font-size: 22px;
+    color: #222;
+    margin: 10px 0;
+}
+
 .project_details p {
-    margin-bottom: 0.5em;
+    margin: 8px 0;
 }
 
 .details_container,
@@ -37,6 +45,11 @@
     cursor: pointer;
     max-height: 40px;
     border: none;
+    font-size: 14px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn:hover {

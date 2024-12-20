@@ -8,8 +8,7 @@
     padding: 10px;
     border-radius: 5px;
     font-size: 25px;
-    display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .project_details span {
@@ -19,7 +18,7 @@
 .project_details h2{
     font-size: 22px;
     color: #222;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .project_details p {
@@ -29,33 +28,102 @@
 .details_container,
 .service_form_container {
     border-bottom: 1px solid #7a7a7a;
-    margin-bottom: 1.2em;
-    padding-bottom: 1.2em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.btn {
+.btn_edit {
     background-color: #222;
     color: #fff;
     padding: 0.5em 1em;
     text-decoration: none;
+    text-align: center;
     transition: 0.5s;
     cursor: pointer;
     max-height: 40px;
     border: none;
     font-size: 14px;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.btn:hover {
+.btn_add_service {
+    background-color: #222;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+    max-height: 40px;
+    border: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.btn_edit:hover, 
+.btn_add_service:hover {
     color: #ffbb33;
 }
 
 .project_info {
     width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .project_details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 40px;
+    }
+}
+
+@media(max-width: 425px) {
+    .project_details {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .project_details h1 {
+        padding: 8px;
+        font-size: 20px;
+    }
+
+    .project_details span {
+        font-size: 14px;
+    }
+
+    .project_details h2 {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    
+    .project_details p {
+        font-size: 14px;
+        margin: 6px 0;
+    }
+
+    .btn_edit,
+    .btn_add_service {
+        padding: 8px;
+        max-height: 30px;
+    }
+}
+
+@media(max-width: 360px) {
+    .project_details h1 {
+        font-size: 18px;
+    }
+
+    .project_details h2 {
+        font-size: 16px;
+    }
 }

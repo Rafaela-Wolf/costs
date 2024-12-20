@@ -1,5 +1,5 @@
 import { BsFillTrashFill } from 'react-icons/bs';
-import styles from '../project/ProjectCard.module.css';
+import styles from './ServiceCard.module.css';
 
 function ServiceCard({ id, name, cost, description, handleRemove }) {
 
@@ -9,15 +9,17 @@ function ServiceCard({ id, name, cost, description, handleRemove }) {
     }
 
     return (
-        <div className={styles.project_card}>
-            <h4>{name}</h4>
-            <p><span>Total cost:</span> ${cost}</p>
-            <p>{description}</p>
+        <div className={styles.service_container}>
+            <div className={styles.service_card}>
+                <h4>{name}</h4>
+                <p><span>Total cost:</span> ${cost}</p>
+                <p>{description}</p>
 
-            <div className={styles.project_card_actions}>
-                <button onClick={remove}>
-                    <BsFillTrashFill /> Remove
-                </button>
+                <div className={styles.service_btn}>
+                    <button onClick={remove}>
+                        <BsFillTrashFill /> Remove
+                    </button>
+                </div>
             </div>
         </div>
     )

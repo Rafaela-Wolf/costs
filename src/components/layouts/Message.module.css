@@ -1,9 +1,8 @@
 .message {
     width: 100%;
-    padding: 1em;
+    padding: 20px;
     border: 1px solid #000;
     margin: 0 auto;
-    text-align: center;
     margin-bottom: 2em;
     border-radius: 5px;
 }
@@ -12,10 +11,14 @@
     color: #155724;
     background-color: #D4EDDA;
     border-color: #C3E6CB;
+    padding: 10px;    
+    text-align: center;
 }
 
 .error {
     color: #721C24;
     background-color: #F8D7BA;
     border-color: #F5C6CB;
+    padding: 10px;
+    text-align: center;
 }

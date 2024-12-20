@@ -152,14 +152,14 @@ function Project() {
                         {message && <Message type={type} msg={message} />}
                         <div className={styles.details_container}>
                             <h1>{project.name}</h1>
-                            <button className={styles.btn} onClick={toggleProjectForm}>
+                            <button className={styles.btn_edit} onClick={toggleProjectForm}>
                                 {!showProjectForm ? 'Edit project' : 'Close'}
                             </button>
                             {!showProjectForm ? (
                                 <div className={styles.project_info}>
                                     <p><span>Category:</span> {project.category.name}</p>
                                     <p><span>Total budget:</span> ${project.budget}</p>
-                                    <p><span>Total used:</span> ${project.cost}</p>
+                                    <p><span>Total used:</span> ${project.cost || "$0"}</p>
                                 </div>
                             ) : (
                                 <div className={styles.project_info}>
@@ -172,8 +172,8 @@ function Project() {
                             )}
                         </div>
                         <div className={styles.service_form_container}>
-                            <h2>Add service:</h2>
-                            <button className={styles.btn} onClick={toggleServiceForm}>
+                            <h2>Add service</h2>
+                            <button className={styles.btn_add_service} onClick={toggleServiceForm}>
                                 {!showServiceForm ? 'Add service' : 'Close'}
                             </button>
                             <div className={styles.project_info}>

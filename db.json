@@ -19,8 +19,27 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": null,
-      "services": []
+      "cost": 6000,
+      "services": [
+        {
+          "name": "testes",
+          "cost": "3000",
+          "description": "Contratar um desenvolvedor",
+          "id": "9cac1e0b-7583-4640-987e-3b5300b451d5"
+        },
+        {
+          "name": "Rafaela Wolf",
+          "cost": "3000",
+          "description": "teste teste",
+          "id": "f72463b4-3baf-4182-9d48-3aa034d66573"
+        },
+        {
+          "name": "teste1",
+          "cost": "3000",
+          "description": "teste teste",
+          "id": "282e2922-d195-4fd3-9814-79bbc9501b26"
+        }
+      ]
     },
     {
       "id": "ec4a",

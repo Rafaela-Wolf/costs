@@ -43,4 +43,4 @@ Este é o frontend de um projeto de gerenciamento de custos. O objetivo é forne
     npm start
     ```
 
-2. Acesse a aplicação no navegador em `http://localhost:3000`.
+2. Acesse a aplicação no navegador em `SeuLocalHost`.

@@ -5,13 +5,15 @@ import SubmitBtn from '../form/SubmitBtn';
 
 import { useEffect, useState } from 'react';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function ProjectForm({ handleSubmit, btnText, projectData }) {
 
     const [categories, setCategories] = useState([]);
     const [project, setProject] = useState(projectData || []);
 
     useEffect(() => {
-        fetch("http://localhost:3000/categories", {
+        fetch(`${API_URL}/categories`, {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'

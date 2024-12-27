@@ -2,6 +2,8 @@ import ProjectForm from '../project/ProjectForm';
 import styles from './NewProject.module.css';
 import { useNavigate } from 'react-router-dom';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function NewProject() {
 
     const navigate = useNavigate();
@@ -12,7 +14,7 @@ function NewProject() {
         project.cost = 0
         project.services = []
 
-        fetch("http://localhost:3000/projects", {
+        fetch(`${API_URL}/projects`, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

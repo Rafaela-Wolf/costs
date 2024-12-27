@@ -3,16 +3,17 @@
     padding: 20px;
     border: 1px solid #000;
     margin: 0 auto;
-    margin-bottom: 2em;
-    border-radius: 5px;
 }
 
-.sucess {
+.success {
     color: #155724;
     background-color: #D4EDDA;
     border-color: #C3E6CB;
     padding: 10px;    
     text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 .error {
@@ -21,4 +22,17 @@
     border-color: #F5C6CB;
     padding: 10px;
     text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+@media(max-width: 300px) {
+    .success {
+        font-size: 14px;
+    }
+
+    .error {
+        font-size: 14px;
+    }
 }

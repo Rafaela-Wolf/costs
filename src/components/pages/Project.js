@@ -81,18 +81,18 @@ function Project() {
     function createService(project) {
 
         setMessage("");
-    
+
         if (!project.services || project.services.length === 0) {
             setMessage("No services found to create.");
             setType("error");
             return;
         }
-    
+
         const lastService = project.services[project.services.length - 1];
-    
+
         lastService.id = uuidv4();
-    
-        const lastServiceCost = parseFloat(lastService.cost || 0); 
+
+        const lastServiceCost = parseFloat(lastService.cost || 0);
         const newCost = parseFloat(project.cost || 0) + lastServiceCost;
 
         if (newCost > parseFloat(project.budget)) {
@@ -101,9 +101,9 @@ function Project() {
             project.services.pop();
             return false;
         }
-    
+
         project.cost = newCost;
-    
+
         fetch(`http://localhost:5000/projects/${project.id}`, {
             method: "PATCH",
             headers: {
@@ -116,7 +116,7 @@ function Project() {
                 setShowServiceForm(false);
             })
             .catch((err) => console.log(err));
-    }    
+    }
 
     function removeService(id, cost) {
         const servicesUpdate = project.services.filter(
@@ -140,6 +140,7 @@ function Project() {
                 setProject(projectUpdated)
                 setServices(servicesUpdate)
                 setMessage("Service successfully removed!")
+                setType('success');
             })
             .catch((err) => console.log(err));
     }
@@ -159,14 +160,14 @@ function Project() {
                                 <div className={styles.project_info}>
                                     <p><span>Category:</span> {project.category.name}</p>
                                     <p><span>Total budget:</span> ${project.budget}</p>
-                                    <p><span>Total used:</span> ${project.cost || "$0"}</p>
+                                    <p><span>Total used:</span> ${project.cost || "0"}</p>
                                 </div>
                             ) : (
                                 <div className={styles.project_info}>
-                                    <ProjectForm 
-                                        handleSubmit={editPost} 
-                                        btnText="Finish edit" 
-                                        projectData={project} 
+                                    <ProjectForm
+                                        handleSubmit={editPost}
+                                        btnText="Finish edit"
+                                        projectData={project}
                                     />
                                 </div>
                             )}
@@ -178,7 +179,7 @@ function Project() {
                             </button>
                             <div className={styles.project_info}>
                                 {showServiceForm && (
-                                    <ServiceForm 
+                                    <ServiceForm
                                         handleSubmit={createService}
                                         btnText="Add service"
                                         projectData={project}
@@ -188,9 +189,9 @@ function Project() {
                         </div>
                         <h2>Services</h2>
                         <Container customClass="start">
-                            {services.length > 0 && 
+                            {services.length > 0 &&
                                 services.map((service) => (
-                                    <ServiceCard 
+                                    <ServiceCard
                                         id={service.id}
                                         name={service.name}
                                         cost={service.cost}
@@ -203,12 +204,12 @@ function Project() {
                             {services.length === 0 && <p>No services registered.</p>}
                         </Container>
                     </Container>
-                </div> 
+                </div>
             ) : (
                 <Loading />
             )}
         </>
-    );    
+    );
 }
 
 export default Project;

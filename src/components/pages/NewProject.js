@@ -2,8 +2,6 @@ import ProjectForm from '../project/ProjectForm';
 import styles from './NewProject.module.css';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 function NewProject() {
 
     const navigate = useNavigate();
@@ -14,7 +12,7 @@ function NewProject() {
         project.cost = 0
         project.services = []
 
-        fetch(`${API_URL}/projects`, {
+        fetch("https://costs-back-lovat.vercel.app/api/projects", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

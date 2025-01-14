@@ -1,0 +1,92 @@
+{
+  "projects": [
+    {
+      "id": "9f3e",
+      "name": "projeto-teste",
+      "budget": "10000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 4000,
+      "services": [
+        {
+          "name": "Rafaela",
+          "cost": "4000",
+          "description": "teste teste",
+          "id": "fc7dc7fe-7ea2-4da7-9c81-035396c7957d"
+        }
+      ]
+    },
+    {
+      "id": "ed3f",
+      "name": "teste1",
+      "budget": "9000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 6000,
+      "services": [
+        {
+          "name": "testes",
+          "cost": "3000",
+          "description": "Contratar um desenvolvedor",
+          "id": "9cac1e0b-7583-4640-987e-3b5300b451d5"
+        },
+        {
+          "name": "Rafaela Wolf",
+          "cost": "3000",
+          "description": "teste teste",
+          "id": "f72463b4-3baf-4182-9d48-3aa034d66573"
+        },
+        {
+          "name": "teste1",
+          "cost": "3000",
+          "description": "teste teste",
+          "id": "282e2922-d195-4fd3-9814-79bbc9501b26"
+        }
+      ]
+    },
+    {
+      "id": "ec4a",
+      "name": "projeto-teste-design-responsivo",
+      "budget": "4000000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "72d3",
+      "name": "Rafaela",
+      "budget": "50000",
+      "category": {
+        "id": "2",
+        "name": "Development"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infrastructure"
+    },
+    {
+      "id": "2",
+      "name": "Development"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planning"
+    }
+  ]
+}

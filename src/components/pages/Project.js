@@ -14,8 +14,6 @@ import ServiceCard from '../services/ServiceCard';
 
 import { v4 as uuidv4 } from 'uuid';
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 function Project() {
 
     const { id } = useParams();
@@ -30,7 +28,7 @@ function Project() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch(`${API_URL}/projects/${id}`, {
+            fetch(`https://costs-back-lovat.vercel.app/api/projects/${id}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json'
@@ -55,7 +53,7 @@ function Project() {
             return false;
         }
 
-        fetch(`${API_URL}/projects/${project.id}`, {
+        fetch(`https://costs-back-lovat.vercel.app/api/projects/${project.id}`, {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',
@@ -106,7 +104,7 @@ function Project() {
 
         project.cost = newCost;
 
-        fetch(`${API_URL}/projects/${project.id}`, {
+        fetch(`https://costs-back-lovat.vercel.app/api/projects/${project.id}`, {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',
@@ -130,7 +128,7 @@ function Project() {
         projectUpdated.services = servicesUpdate;
         projectUpdated.cost = parseFloat(projectUpdated);
 
-        fetch(`${API_URL}/projects/${projectUpdated.id}`, {
+        fetch(`https://costs-back-lovat.vercel.app/api/projects/${projectUpdated.id}`, {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',

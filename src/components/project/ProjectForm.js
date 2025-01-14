@@ -5,15 +5,13 @@ import SubmitBtn from '../form/SubmitBtn';
 
 import { useEffect, useState } from 'react';
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 function ProjectForm({ handleSubmit, btnText, projectData }) {
 
     const [categories, setCategories] = useState([]);
     const [project, setProject] = useState(projectData || []);
 
     useEffect(() => {
-        fetch(`${API_URL}/categories`, {
+        fetch("https://costs-back-lovat.vercel.app/api/categories", {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
